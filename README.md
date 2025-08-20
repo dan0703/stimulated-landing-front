@@ -6,6 +6,18 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
+For local development with the included mock API run the mock server in a separate terminal:
+
+```
+npm run mock-api
+```
+
+Or start both the Angular app and the mock API together:
+
+```
+npm run start:all
+```
+
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
