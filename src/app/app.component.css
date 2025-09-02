@@ -1,48 +1,14 @@
-/* Navegación */
-nav {
-  padding: 16px;
-  background-color: #f5f5f5;
-  margin-bottom: 20px;
-  border-bottom: 1px solid #ddd;
+
+/* App Component Styles */
+
+/* Reset browser defaults */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-nav a {
-  color: #333;
-  text-decoration: none;
-  padding: 8px 16px;
-  margin-right: 16px;
-  border-radius: 4px;
-  transition: all 0.3s ease;
-}
-
-nav a:hover {
-  color: #1976d2;
-  background-color: #e3f2fd;
-}
-
-nav a.active {
-  color: #1976d2;
-  background-color: #e3f2fd;
-  font-weight: bold;
-}
-
-/* Contenido principal */
+/* Main container */
 .main {
-  padding: 20px;
-}
-
-.content {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.content h1 {
-  color: #333;
-  margin-bottom: 16px;
-}
-
-.content p {
-  color: #666;
-  font-size: 18px;
+  padding: 0px;
 }

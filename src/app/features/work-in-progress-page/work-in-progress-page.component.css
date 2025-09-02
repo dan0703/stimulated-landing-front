@@ -1,0 +1,160 @@
+/* Work in Progress Page Styles */
+
+.page-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  width: 100%;
+  margin: 0;
+  text-align: center;
+}
+
+.content-after-hero {
+  flex: 1;
+  background-color: transparent;
+  padding: 2rem;
+  text-align: center;
+}
+
+.content-after-hero label {
+  font-size: 2rem;
+  color: #333;
+  display: block;
+  margin-bottom: 2rem;
+}
+
+.overlay-image {
+  /* participate in flex layout of .hero-overlay so it's centered above the label */
+  position: relative;
+  max-width: 45%; /* responsive size, tweak as needed */
+  width: auto;
+  height: auto;
+  z-index: 2; /* above overlay */
+  pointer-events: none;
+  margin: 0 auto;
+  display: block;
+}
+
+/* animated dots (wave) */
+.overlay-label .dots {
+  display: inline-block;
+  margin-left: 6px;
+}
+.overlay-label .dots span {
+  display: inline-block;
+  transform-origin: center bottom;
+  animation: wave 1s infinite linear;
+  font-weight: 700;
+  margin: 0 1px;
+}
+.overlay-label .dots span:nth-child(1) { animation-delay: 0s; }
+.overlay-label .dots span:nth-child(2) { animation-delay: 0.12s; }
+.overlay-label .dots span:nth-child(3) { animation-delay: 0.24s; }
+
+@keyframes wave {
+  0%   { transform: translateY(0); }
+  20%  { transform: translateY(-6px); }
+  40%  { transform: translateY(0); }
+  100% { transform: translateY(0); }
+}
+
+/* Make the IMG a block-level element and span the container fully */
+.content .main-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  z-index: 0;
+  opacity: 1;
+}
+
+/* Hero full viewport */
+.hero-full {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.hero-full .main-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* overlay that sits above the image */
+.hero-overlay {
+  --overlay-opacity: 0.60; /* tweak this value to change darkness */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,var(--overlay-opacity));
+  z-index: 1;
+  pointer-events: none; /* allow clicks to pass through if needed */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0 0 0; /* quitar padding bottom */
+}
+
+/* Contenido central (logo + label) */
+.hero-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+/* Footer dentro del hero */
+.footer-in-hero {
+  width: 100%;
+  z-index: 3;
+  pointer-events: auto; /* permitir interacción con el footer */
+  margin-top: auto;
+  /* asegurar que llegue hasta el fondo */
+  position: relative;
+  bottom: 0;
+}
+
+/* Contenido central (logo + label) */
+.hero-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+/* Footer dentro del hero */
+.footer-in-hero {
+  background: transparent;
+  width: 100%;
+  z-index: 3;
+  height: auto;
+  pointer-events: auto; /* permitir interacción con el footer */
+}
+
+.overlay-label {
+  /* place below the centered image inside the overlay */
+  position: relative;
+  color: rgba(255,255,255,0.95);
+  font-size: 42px;
+  /* use the variable/medium Satoshi for this label */
+  font-family: 'Satoshi-Variable', 'Satoshi-Medium', var(--base-font-family);
+  font-variation-settings: 'wght' 500;
+  text-align: center;
+  z-index: 2; /* ensure text is above the overlay */
+  pointer-events: none;
+  background: transparent;
+  margin-top: 12px;
+}

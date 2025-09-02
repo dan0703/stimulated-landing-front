@@ -1,0 +1,49 @@
+<!-- Footer Component -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Main Footer Content -->
+    <div class="footer-content">
+
+      <!-- Logo/Brand Section -->
+      <div class="footer-section brand">
+        <h3 class="footer-logo">Stimuld</h3>
+        <p class="footer-description">
+          Tu descripción de la empresa aquí.
+        </p>
+      </div>
+
+      <!-- Navigation Links -->
+      <div class="footer-section links">
+        <h4>Navegación</h4>
+        <ul class="footer-links">
+          <li *ngFor="let link of navigationLinks">
+            <a [href]="link.url">{{ link.name }}</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Social Media -->
+      <div class="footer-section social">
+        <h4>Síguenos</h4>
+        <div class="social-links">
+          <a
+            *ngFor="let social of socialLinks"
+            [href]="social.url"
+            [title]="social.name"
+            class="social-link"
+          >
+            {{ social.name }}
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <p>&copy; {{ currentYear }} Stimuld. Todos los derechos reservados.</p>
+    </div>
+
+  </div>
+</footer>

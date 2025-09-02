@@ -1,0 +1,93 @@
+/* Footer Styles */
+.footer {
+  background-color: transparent; /* cambiado a transparente para overlay */
+  color: rgba(255, 255, 255, 0.9);
+  padding: 1rem 0 0 0; /* quitar padding bottom para llegar al borde */
+  margin: 0; /* quitar cualquier margin */
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 1rem; /* reducido */
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 1rem; /* reducido */
+    text-align: center;
+  }
+}
+
+/* Footer Sections */
+.footer-section h3,
+.footer-section h4 {
+  margin-bottom: 0.75rem; /* reducido */
+  color: white;
+  font-size: 0.9rem; /* reducido */
+}
+
+.footer-logo {
+  font-family: 'Satoshi-Variable', var(--base-font-family);
+  font-variation-settings: 'wght' 700;
+  font-size: 1.2rem; /* reducido */
+  margin-bottom: 0.5rem;
+}
+
+.footer-description {
+  color: rgba(255, 255, 255, 0.6); /* más sutil */
+  line-height: 1.4;
+  font-size: 0.85rem; /* reducido */
+}
+
+/* Contact Info */
+.contact-info p {
+  margin: 0.2rem 0; /* reducido */
+  color: rgba(255, 255, 255, 0.6); /* más sutil */
+  font-size: 0.8rem; /* reducido */
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  gap: 0.75rem; /* reducido */
+  flex-wrap: wrap;
+}
+
+.social-link {
+  color: rgba(255, 255, 255, 0.6); /* más sutil */
+  text-decoration: none;
+  padding: 0.375rem 0.75rem; /* reducido */
+  border: 1px solid rgba(255, 255, 255, 0.15); /* más sutil */
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  font-size: 0.8rem; /* reducido */
+}
+
+.social-link:hover {
+  color: white;
+  border-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.08); /* más sutil */
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.08); /* más sutil */
+  padding: 0.75rem 0; /* padding uniforme */
+  text-align: center;
+  margin: 0; /* asegurar que no haya margin */
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.4); /* más sutil */
+  font-size: 0.75rem; /* reducido */
+}

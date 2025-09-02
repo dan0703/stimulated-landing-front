@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { RouterOutlet, RouterModule, RouterLink, RouterLinkActive } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { WorkInProgressPageComponent } from './features/work-in-progress-page';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, RouterModule, RouterLink, RouterLinkActive, CommonModule],
+  imports: [CommonModule, WorkInProgressPageComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

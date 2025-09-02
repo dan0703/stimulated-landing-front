@@ -1,1 +1,43 @@
-/* You can add global styles to this file, and also import other style files */
+
+/* Import local font definitions */
+@import './assets/fonts/Satoshi_Complete/Fonts/WEB/css/satoshi.css';
+
+/* Global typography */
+:root {
+	--base-font-family: 'Satoshi-Variable', 'Satoshi-Regular', 'Satoshi', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+html, body {
+	font-family: var(--base-font-family);
+	font-variation-settings: 'wght' 400;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* sensible defaults */
+body {
+	margin: 0;
+	color: #111;
+	background: #fff;
+}
+
+/* Utility classes to pick Satoshi variants per-element */
+.satoshi-regular {
+	font-family: 'Satoshi-Regular', var(--base-font-family);
+	font-weight: 400;
+}
+.satoshi-medium {
+	font-family: 'Satoshi-Variable', var(--base-font-family);
+	/* variable font approach: set wght axis */
+	font-variation-settings: 'wght' 500;
+}
+.satoshi-bold {
+	font-family: 'Satoshi-Bold', 'Satoshi-Variable', var(--base-font-family);
+	font-weight: 700;
+}
+.satoshi-variable {
+	font-family: 'Satoshi-Variable', var(--base-font-family);
+	/* use font-variation-settings to select weight dynamically */
+	font-variation-settings: 'wght' 700;
+}
+
