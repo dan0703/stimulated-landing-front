@@ -1,20 +1,21 @@
 .header {
   display: flex;
-  height: 100px;
+  height: 60px;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 0px;
+  padding: 0px 0px;
   font-family: 'Satoshi-Variable', 'Satoshi-Medium', sans-serif;
 }
 .nav{
   display: flex ;
-  align-items: end;
+  align-items: center;
+
   width: 100%;
-  margin-bottom: 25px;
 }
 .nav-container{
   display: flex;
-  height: 100px;
+  align-items: center;
+  height: 100%;
   border-bottom: solid 1px white;
   width: 50%;
   margin-right: 8%;
@@ -26,15 +27,11 @@ img {
   &:hover {
       filter: grayscale(0%);
       transition: all .5s ease;
-      transform: scale(1.05);
+      transform: scale(1.2);
       transition: transform 0.5s ease, filter 0.5s ease;
       cursor: pointer;
   }
 }
-
-// .brand-logo{
-//   background: red;
-// }
 
 .lenguage{
   display: flex;
@@ -66,14 +63,14 @@ img {
   font-size: 20px;
   font-family: 'Satoshi-Variable', 'Satoshi-Medium', sans-serif;
   font-variation-settings: 'wght' 300;
-  transition: color 0s;
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease, font-variation-settings 0.3s ease;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
-  color: #80B9B1;
-  text-decoration: underline;
-  text-underline-offset: 10px;
+  transform: scale(1.2);
+  font-variation-settings: 'wght' 500;
   text-decoration-thickness: 3px;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent; /* Elimina el efecto de resaltado en móviles */
