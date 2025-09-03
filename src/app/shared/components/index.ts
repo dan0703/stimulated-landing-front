@@ -1,2 +1,2 @@
 // Barrel exports for shared components
-export * from './footer2';
+export * from './footer/footer.component';

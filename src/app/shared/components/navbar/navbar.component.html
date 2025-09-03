@@ -1,0 +1,21 @@
+<header class="header">
+    <div class="logo">
+        <img class="brand-logo" src="assets/logo.png" alt="logo" aria-hidden="true" [routerLink]="['/', currentLang]"/>
+    </div>
+    <div class="nav-container">
+        <nav class="nav">
+            <ul class="nav-links" [class.active]="isMenuOpen">
+                <li><a [routerLink]="['/', currentLang]" (click)="toggleMenu()">Home</a></li>
+                <li><a [routerLink]="['/', currentLang, 'video', videoId]" (click)="toggleMenu()">Video</a></li>
+                <li><a [routerLink]="['/', currentLang, 'photo']" (click)="toggleMenu()">Photo</a></li>
+                <li><a [routerLink]="['/', currentLang, 'contact']" (click)="toggleMenu()">Contact</a></li>
+                <!-- <div class="lenguage">
+                    <li>|</li>
+                    <li><a (click)="switchLanguage('EN')">EN</a></li>
+                    <li><a (click)="switchLanguage('ES')">ES</a></li>
+                </div> -->
+            </ul>
+            <button class="menu" (click)="toggleMenu()">&#9776;</button>
+        </nav>
+    </div>
+</header>

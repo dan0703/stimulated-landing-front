@@ -6,6 +6,15 @@
   /* Sin min-height fijo - se ajusta automáticamente al contenido */
 }
 
+/* NAVBAR FIJO ENCIMA DE TODO */
+app-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10; /* encima de todo */
+}
+
 /* IMAGEN DE FONDO COMPLETAMENTE FIJA - NUNCA SE MUEVE */
 .hero-full {
   position: fixed;
