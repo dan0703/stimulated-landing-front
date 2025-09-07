@@ -8,7 +8,52 @@ html, body {
   padding: 0;
 }
 
-/* Main container */
+/* Layout container */
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* NAVBAR FIJO ENCIMA DE TODO */
+app-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 98%;
+  padding: 0 1%;
+  z-index: 10; /* encima de todo */
+  height: 60px; /* altura del navbar */
+}
+
+/* IMAGEN DE FONDO COMPLETAMENTE FIJA - NUNCA SE MUEVE */
+.hero-full {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 98vw;
+  height: 100vh;
+  background: url('/assets/images/studio.JPG') center center/cover no-repeat;
+  opacity: 0.6; /* 60% de opacidad */
+  filter: blur(4px); /* efecto borroso */
+  z-index: -1; /* debajo de todo */
+}
+
+/* Main content area - ajustado para sample store */
 .main {
-  padding: 0px;
+  flex: 1;
+  width: 95%;
+  margin: 60px auto 0 auto; /* espacio para el navbar fijo y centrado */
+  padding: 2% 0;
+  min-height: calc(100vh - 60px);
+  position: relative;
+  z-index: 2;
+}
+
+/* Footer dinámico - solo aparece al final del contenido */
+.footer-in-hero {
+  width: 95%;
+  margin: auto;
+  z-index: 3;
+  margin-top: auto; /* empuja al final */
 }

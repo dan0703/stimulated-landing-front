@@ -3,22 +3,24 @@
   height: 60px;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 0px;
+  padding: 0 2%;
   font-family: 'Satoshi-Variable', 'Satoshi-Medium', sans-serif;
+  background: rgba(0, 0, 0, 0.3); /* fondo semi-transparente */
+  backdrop-filter: blur(10px); /* efecto glassmorphism */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 .nav{
   display: flex ;
   align-items: center;
-
-  width: 100%;
+  width: 95%;
 }
 .nav-container{
   display: flex;
   align-items: center;
   height: 100%;
-  border-bottom: solid 1px white;
-  width: 50%;
-  margin-right: 8%;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.3);
+  width: 45%;
+  margin-right: 5%;
 }
 img {
   width: 100px;
@@ -42,7 +44,7 @@ img {
 .logo{
   display: flex;
   align-items:center;
-  margin-left: 5% ;
+  margin-left: 2% ;
   height: 100%;
 }
 
