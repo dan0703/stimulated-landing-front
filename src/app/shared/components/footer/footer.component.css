@@ -1,93 +1,257 @@
 /* Footer Styles */
 .footer {
-  background-color: transparent; /* cambiado a transparente para overlay */
+  background: transparent;
   color: rgba(255, 255, 255, 0.9);
-  padding: 1rem 0 0 0; /* quitar padding bottom para llegar al borde */
-  margin: 0; /* quitar cualquier margin */
+  padding: 3rem 0 0 0;
+  margin-top: 4rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 2rem;
 }
 
+/* Main Footer Content */
 .footer-content {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   gap: 2rem;
-  margin-bottom: 1rem; /* reducido */
+  margin-bottom: 2rem;
 }
 
-@media (max-width: 768px) {
-  .footer-content {
-    grid-template-columns: 1fr;
-    gap: 1rem; /* reducido */
-    text-align: center;
-  }
+/* Company Info Section */
+.company-info {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 }
 
-/* Footer Sections */
-.footer-section h3,
-.footer-section h4 {
-  margin-bottom: 0.75rem; /* reducido */
-  color: white;
-  font-size: 0.9rem; /* reducido */
+.contact-info {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
 }
 
 .footer-logo {
-  font-family: 'Satoshi-Variable', var(--base-font-family);
+  font-family: 'Satoshi-Variable', sans-serif;
   font-variation-settings: 'wght' 700;
-  font-size: 1.2rem; /* reducido */
-  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+  color: rgba(0, 212, 255, 1);
+  margin-bottom: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .footer-description {
-  color: rgba(255, 255, 255, 0.6); /* más sutil */
-  line-height: 1.4;
-  font-size: 0.85rem; /* reducido */
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  font-family: 'Satoshi-Variable', sans-serif;
+  font-variation-settings: 'wght' 400;
 }
 
-/* Contact Info */
 .contact-info p {
-  margin: 0.2rem 0; /* reducido */
-  color: rgba(255, 255, 255, 0.6); /* más sutil */
-  font-size: 0.8rem; /* reducido */
+  margin: 0;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+  font-family: 'Satoshi-Variable', sans-serif;
+  font-variation-settings: 'wght' 400;
 }
 
-/* Social Links */
-.social-links {
+.contact-info strong {
+  color: rgba(0, 212, 255, 0.9);
+  font-variation-settings: 'wght' 500;
+}
+
+/* Quick Links Section */
+.footer-section h4 {
+  color: white;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  font-family: 'Satoshi-Variable', sans-serif;
+  font-variation-settings: 'wght' 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-family: 'Satoshi-Variable', sans-serif;
+  font-variation-settings: 'wght' 400;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: rgba(0, 212, 255, 1);
+}
+
+/* Social Media Section */
+.social-section {
   display: flex;
-  gap: 0.75rem; /* reducido */
-  flex-wrap: wrap;
+  align-items: center;
+}
+
+.social-networks {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
 }
 
 .social-link {
-  color: rgba(255, 255, 255, 0.6); /* más sutil */
+  display: flex;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.7);
   text-decoration: none;
-  padding: 0.375rem 0.75rem; /* reducido */
-  border: 1px solid rgba(255, 255, 255, 0.15); /* más sutil */
+  padding: 0.5rem;
   border-radius: 4px;
   transition: all 0.3s ease;
-  font-size: 0.8rem; /* reducido */
 }
 
 .social-link:hover {
-  color: white;
-  border-color: rgba(255, 255, 255, 0.4);
-  background-color: rgba(255, 255, 255, 0.08); /* más sutil */
+  color: rgba(0, 212, 255, 1);
+  background: rgba(0, 212, 255, 0.1);
+}
+
+.social-link svg {
+  width: 10px !important;
+  height: 10px !important;
+  min-width: 10px;
+  min-height: 10px;
+  max-width: 10px;
+  max-height: 10px;
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+.social-link:hover svg {
+  transform: scale(1.2);
 }
 
 /* Footer Bottom */
 .footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.08); /* más sutil */
-  padding: 0.75rem 0; /* padding uniforme */
-  text-align: center;
-  margin: 0; /* asegurar que no haya margin */
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.5rem 0;
+  margin-top: 2rem;
 }
 
-.footer-bottom p {
+.footer-bottom-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.copyright,
+.designer-credit {
   margin: 0;
-  color: rgba(255, 255, 255, 0.4); /* más sutil */
-  font-size: 0.75rem; /* reducido */
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.85rem;
+  font-family: 'Satoshi-Variable', sans-serif;
+  font-variation-settings: 'wght' 400;
+}
+
+.designer-credit {
+  color: rgba(0, 212, 255, 0.7);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .company-info {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .contact-info {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 2rem 0 0 0;
+    margin-top: 3rem;
+  }
+
+  .footer-container {
+    padding: 0 1rem;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .company-info {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: center;
+  }
+
+  .footer-logo {
+    font-size: 1.5rem;
+  }
+
+  .social-networks {
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .footer-bottom-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-logo {
+    font-size: 1.3rem;
+  }
+
+  .footer-description {
+    font-size: 0.9rem;
+  }
+
+  .contact-info p {
+    font-size: 0.85rem;
+  }
+
+  .social-link {
+    font-size: 0.85rem;
+  }
+
+  .social-link svg {
+    width: 18px;
+    height: 18px;
+  }
 }

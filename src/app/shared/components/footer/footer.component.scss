@@ -1,77 +1,210 @@
 footer{
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0px 0px;
   background: transparent;
-  opacity: 100%;
-  color: white;
+  color: rgba(255, 255, 255, 0.9);
+  padding: 3rem 0 0 0;
+  margin-top: 4rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   font-family:'Montserrat', sans-serif;
   padding-left: 5%;
   padding-right: 5%;
 }
 
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Main Footer Content */
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Company Info Section */
+.company-info {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.contact-info {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.footer-logo {
+  height: 20px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.contact-info p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+  font-family: 'Satoshi-Variable', sans-serif;
+  font-variation-settings: 'wght' 400;
+}
+
+/* Social Media Section */
+.social-section {
+  display: flex;
+  align-items: center;
+}
+
 .social-networks{
   display: flex;
-  justify-content: center;
+  gap: 1rem;
   align-items: center;
-  gap: 14%;
-  height: 80px;
-  width: 100%;
 }
 
-svg{
-  width: 30px;
-  height: 30px;
-}
-
-.contact-container{
+.social-link {
   display: flex;
-  height: 80px;
-  border-bottom: solid 1px white;
-    // border-top: solid 1px white;
-  width: 100%;
   align-items: center;
-}
-  .ov-label::before{
-    content:"Stimulated";
-    color: white;
-  }
-
-  .nav{
-    display: flex ;
-    justify-content: space-between;
-    width: 100%;
-  }
-
-  .social-networks a svg {
-    width: 40px;
-    height: 40px;
-    transition: transform 0.3s ease;
-  }
-
-.social-networks a svg:hover {
-    transform: scale(1.2);
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
 }
 
-  @media (max-width: 768px) {
-    .contact-container{
-        font-size: 10px;
-    }
-    .social-networks a svg {
-      width: 30px;
-      height: 30px;
-      transition: transform 0.3s ease;
-    }
+.social-link:hover {
+  color: rgba(0, 212, 255, 1);
+  background: rgba(0, 212, 255, 0.1);
+}
+
+.social-networks svg,
+.social-link svg,
+.footer svg {
+  width: 30px !important;
+  height: 30px !important;
+  min-width: 30px !important;
+  min-height: 30px !important;
+  max-width: 30px !important;
+  max-height: 30px !important;
+  transition: transform 0.3s ease;
+  display: block !important;
+  box-sizing: border-box !important;
+}
+
+.social-networks svg:hover,
+.social-link:hover svg {
+  transform: scale(1.2);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.5rem 0;
+  margin-top: 2rem;
+}
+
+.footer-bottom-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.copyright,
+.designer-credit {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.85rem;
+  font-family: 'Satoshi-Variable', sans-serif;
+  font-variation-settings: 'wght' 400;
+}
+
+.designer-credit {
+  // color: rgba(0, 212, 255, 0.7);
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
   }
-  @media (max-width: 368px) {
-    .contact-container{
-        font-size: 8px;
-    }
-    .social-networks a svg {
-      width: 20px;
-      height: 20px;
-      transition: transform 0.3s ease;
-    }
+
+  .company-info {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .contact-info {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  footer {
+    padding: 2rem 5% 0 5%;
+    margin-top: 3rem;
+  }
+
+  .footer-container {
+    padding: 0 1rem;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .company-info {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: center;
+  }
+
+  .footer-logo {
+    height: 20px;
+  }
+
+  .social-networks svg,
+  .social-link svg,
+  .footer svg {
+    width: 10px !important;
+    height: 10px !important;
+    min-width: 10px !important;
+    min-height: 10px !important;
+    max-width: 10px !important;
+    max-height: 10px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-logo {
+    height: 20px;
+  }
+
+  .contact-info p {
+    font-size: 0.85rem;
+  }
+
+  .social-networks svg,
+  .social-link svg,
+  .footer svg {
+    width: 20px !important;
+    height: 20px !important;
+    min-width: 20px !important;
+    min-height: 20px !important;
+    max-width: 20px !important;
+    max-height: 20px !important;
+  }
 }
