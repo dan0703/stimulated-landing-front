@@ -1,0 +1,80 @@
+.portfolio-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: white;
+}
+
+.portfolio-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.portfolio-header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, rgba(0, 212, 255, 1), rgba(255, 255, 255, 0.9));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.portfolio-header p {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+}
+
+.spotify-section {
+  margin-bottom: 3rem;
+}
+
+.spotify-section h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: rgba(0, 212, 255, 1);
+  text-align: center;
+}
+
+.spotify-embed {
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .portfolio-container {
+    padding: 1rem;
+  }
+
+  .portfolio-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .portfolio-header p {
+    font-size: 1rem;
+  }
+
+  .spotify-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .spotify-embed {
+    margin: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-header h1 {
+    font-size: 2rem;
+  }
+
+  .spotify-section h2 {
+    font-size: 1.3rem;
+  }
+}

@@ -2,6 +2,7 @@
 import { Routes } from '@angular/router';
 import { WorkInProgressPageComponent } from './features/work-in-progress-page/work-in-progress-page.component';
 import { SamplePacksStoreComponent } from './features/sample-packs-store/sample-packs-store.component';
+import { PortfolioComponent } from './features/portfolio/portfolio.component';
 
 export const routes: Routes = [
 	{
@@ -13,8 +14,12 @@ export const routes: Routes = [
 		component: WorkInProgressPageComponent
 	},
 	{
-		path: ':lang/photo',
-		component: SamplePacksStoreComponent
+		path: ':lang/portafolio',
+		component: PortfolioComponent
+	},
+	{
+		path: ':lang/portafolio/:videoId',
+		component: PortfolioComponent
 	},
 	{
 		path: ':lang/store',
